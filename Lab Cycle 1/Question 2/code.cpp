@@ -22,19 +22,19 @@ void area(float radius)
     std::cout << "The Area of the Circle is " << area;
 }
 
-void area(float height, float base1, float base2)
-{
-    float area;
-    area = 0.5 * (height * (base1 + base2));
-    std::cout << "The Area of the Trapezium is " << area;
-}
-
 void area(int tside1, int tside2, int tside3)
 {
     float area;
     float s = (tside1 + tside2 + tside3) / 2;
     area = std::sqrt(s * (s - tside1) * (s - tside2) * (s - tside3));
     std::cout << "The Area of the Triangle is " << area;
+}
+
+void area(float height, float base)
+{
+    float area;
+    area = base * height;
+    std::cout << "The Area of the Parallelogram is " << area;
 }
 
 int main()
@@ -49,11 +49,6 @@ int main()
     std::cin >> radius;
     area(radius);
 
-    float height, base1, base2;
-    std::cout << "\nEnter the Height and Bases of Trapezium: ";
-    std::cin >> height >> base1 >> base2;
-    area(height, base1, base2);
-
     int tside1, tside2, tside3;
     std::cout << "\nEnter the Sides of Triangle: ";
     std::cin >> tside1 >> tside2 >> tside3;
@@ -63,6 +58,11 @@ int main()
     std::cout << "\nEnter the Side of the Square: ";
     std::cin >> side;
     area(side);
+
+    float height, base;
+    std::cout << "\nEnter the Base and height of Parallelogram: ";
+    std::cin >> base >> height;
+    area(base, height);
 
     return 0;
 }
