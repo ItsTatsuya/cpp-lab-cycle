@@ -11,7 +11,6 @@ public:
     void input()
     {
         std::cout << "Enter the Student Name:";
-        // std::getline(std::cin, name);
         std::cin >> name;
 
         std::cout << "Enter the RollNo: ";
