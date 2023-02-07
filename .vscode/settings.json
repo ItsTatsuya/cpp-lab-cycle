@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.json": "jsonc",
         "iostream": "cpp",
         "array": "cpp",
         "atomic": "cpp",
@@ -43,6 +44,10 @@
         "ostream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "cstring": "cpp",
+        "list": "cpp",
+        "set": "cpp",
+        "sstream": "cpp"
     }
 }
