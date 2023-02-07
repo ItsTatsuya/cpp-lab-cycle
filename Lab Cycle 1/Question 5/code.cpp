@@ -22,6 +22,11 @@ public:
     ~Matrix()
     {
         cout << "\nMemory freed up!\n";
+        for (int i = 0; i < row; i++)
+        {
+            delete p[i];
+        }
+        delete p;
     }
 };
 
@@ -32,7 +37,8 @@ void Matrix::getdata()
     {
         for (int j = 0; j < column; ++j)
         {
-            cout << "Row "<<i+1<<" | "<<"Column "<<j+1<<" : " ;
+            cout << "Row " << i + 1 << " | "
+                 << "Column " << j + 1 << " : ";
             cin >> p[i][j];
         }
     }
