@@ -7,10 +7,12 @@ public:
     static void showcount();
 
 };
+
+int Static::count = 0;
+
 Static::Static(){
     count++;
 }
-int Static::count = 0;
 
 void Static::showcount(){
     std::cout<<"Number of Objects Created: "
