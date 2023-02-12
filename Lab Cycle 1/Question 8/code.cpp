@@ -39,7 +39,10 @@ complex complex::operator+(complex &c2){
 }
 
 void complex::display() {
-    std::cout << real << " + " << img << "i" << "\n";
+    if (img<0)
+        std::cout << real << img << "i" << "\n";
+    else
+        std::cout << real << "+" << img << "i" << "\n";
 }
 
 int main(){
@@ -60,7 +63,8 @@ int main(){
     c1.display();
     std::cout<<"Complex 2: ";
     c2.display();
-    std::cout<<"Complex 3: ";
+
+    std::cout<<"The sum of complex 1 and 2 is: ";
     c3.display();
     return 0;
 }
