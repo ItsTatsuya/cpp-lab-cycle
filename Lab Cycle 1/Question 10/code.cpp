@@ -8,7 +8,7 @@ class store{
 public:
     void add_item();
     void del_item();
-    int dislay_item();
+    void display_item();
 };
 
 void store::add_item()
@@ -25,4 +25,13 @@ void store::add_item()
 
 void store::del_item(){
     cout<<"Enter the product code of the item to be deleted:";
+}
+
+void store::display_item(){
+    cout<<"\n-----RECEIPT-----";
+    cout<<"\nCode: "<<code;
+    cout<<"\nName: "<<name;
+    cout<<"\nPrice: "<<price;
+    cout<<"\nQuantity: "<<quantity;
+    cout<<"\nSum: "<<price*quantity;
 }
