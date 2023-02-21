@@ -68,11 +68,13 @@ int main()
     string1.getString(name1);
     string2.getString(name2);
 
-    cout << "First String" << endl;
+    cout << "\nFirst String" << endl;
     string1.displayLength();
-    cout << "Second String" << endl;
+    cout << "\nSecond String" << endl;
     string2.displayLength();
+    cout << "\nConcatenating the two strings: ";
     result.concatenate(string1, string2);
+    cout << "\nComparing the two strings\n";
     result.compare(string1, string2);
     return 0;
 }

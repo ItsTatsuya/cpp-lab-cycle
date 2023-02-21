@@ -29,7 +29,7 @@ void bank::new_account()
     std::cin >> account_type;
     std::cout << "Your account number is: " << count << "\n";
     account_no = count;
-    std::cout << "Enter the amount of money you want to deposit (Min is ₹500) : ";
+    std::cout << "Enter the amount of money you want to deposit: ";
     std::cin >> balance;
     std::cout << "Your account has been created successfully.\n";
 }
@@ -120,7 +120,7 @@ int main()
             b[acc_no - 1].account_summary();
             break;
         case 5:
-            std::cout << "/nCome back later!!.\n";
+            std::cout << "\nCome back later!!.\n";
             Loop = false;
             break;
         default:
