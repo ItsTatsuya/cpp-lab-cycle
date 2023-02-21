@@ -5,21 +5,21 @@ void area(int length, int breadth)
 {
     int area;
     area = length * breadth;
-    std::cout << "The Area of the Rectangle is " << area;
+    std::cout << "The Area of the Rectangle is " << area << std::endl;
 }
 
 void area(int side)
 {
     int area;
     area = side * side;
-    std::cout << "The Area of the Square is " << area;
+    std::cout << "The Area of the Square is " << area << std::endl;
 }
 
 void area(float radius)
 {
     float area;
     area = 3.14 * radius * radius;
-    std::cout << "The Area of the Circle is " << area;
+    std::cout << "The Area of the Circle is " << area << std::endl;
 }
 
 void area(int tside1, int tside2, int tside3)
@@ -27,14 +27,14 @@ void area(int tside1, int tside2, int tside3)
     float area;
     float s = (tside1 + tside2 + tside3) / 2;
     area = std::sqrt(s * (s - tside1) * (s - tside2) * (s - tside3));
-    std::cout << "The Area of the Triangle is " << area;
+    std::cout << "The Area of the Triangle is " << area << std::endl;
 }
 
 void area(float height, float base)
 {
     float area;
     area = base * height;
-    std::cout << "The Area of the Parallelogram is " << area;
+    std::cout << "The Area of the Parallelogram is " << area << std::endl;
 }
 
 int main()

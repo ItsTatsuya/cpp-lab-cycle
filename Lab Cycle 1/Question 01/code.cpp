@@ -50,7 +50,7 @@ public:
     }
 
     void display()
-    {   
+    {
         std::cout << "\n--------Student Details--------\n";
         std::cout << "Student Name: " << name << "\n";
         std::cout << "Subject 1 Grade:  " << calcGrade(marks[0]) << "\n";
@@ -62,9 +62,16 @@ public:
 
 int main()
 {
-    Students student1;
-    student1.input();
-    student1.display();
-    
-    return 0;
+    int n;
+    std::cout << "Enter the number of students: ";
+    std::cin >> n;
+    Students s[n];
+    for (int i = 0; i < n; i++)
+    {
+        s[i].input();
+    }
+    for (int i = 0; i < n; i++)
+    {
+        s[i].display();
+    }
 }
