@@ -26,12 +26,10 @@ public:
 
         t3.seconds = seconds + t2.seconds;
 
-        t3.minutes = minutes + t2.minutes +
-                     (t3.seconds / 60);
+        t3.minutes = minutes + t2.minutes + (t3.seconds / 60);
         t3.seconds = t3.seconds % 60;
 
-        t3.hours = hours + t2.hours +
-                   (t3.minutes / 60);
+        t3.hours = hours + t2.hours + (t3.minutes / 60);
         t3.minutes = t3.minutes % 60;
 
         return t3;

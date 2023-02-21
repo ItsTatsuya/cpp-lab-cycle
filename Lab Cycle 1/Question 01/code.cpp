@@ -10,7 +10,7 @@ class Students
 public:
     void input()
     {
-        std::cout << "Enter the Student Name:";
+        std::cout << "\nEnter the Student Name:";
         std::cin >> name;
 
         std::cout << "Enter the RollNo: ";
@@ -50,11 +50,13 @@ public:
     }
 
     void display()
-    {
+    {   
+        std::cout << "\n--------Student Details--------\n";
         std::cout << "Student Name: " << name << "\n";
         std::cout << "Subject 1 Grade:  " << calcGrade(marks[0]) << "\n";
         std::cout << "Subject 2 Grade:  " << calcGrade(marks[1]) << "\n";
         std::cout << "Subject 3 Grade:  " << calcGrade(marks[2]) << "\n";
+        std::cout << "--------------------------------\n";
     }
 };
 
