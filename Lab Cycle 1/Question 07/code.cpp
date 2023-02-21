@@ -48,12 +48,16 @@ void Matrix::matrix_add(Matrix &x, Matrix &y)
 }
 
 void Matrix::matrix_mult(Matrix &x, Matrix &y)
-{
+{ 
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < column; j++)
         {
-            p[i][j] = x.p[i][j] * y.p[i][j];
+            p[i][j] = 0;
+            for (int k = 0; k < column; k++)
+            {
+                p[i][j] += x.p[i][k] * y.p[k][j];
+            }
         }
     }
 }
