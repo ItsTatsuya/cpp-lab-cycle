@@ -37,18 +37,35 @@ public:
 
     void display()
     {
-        cout << "Hours: " << hours << "\nMinutes: " << minutes << "\nSeconds: " << seconds << endl;
+        cout << "\nTime: " << hours <<" Hrs"<< ":" << minutes <<" Mins"<< ":" << seconds <<" Sec" << endl;
     }
 };
 
 int main()
 {
+    Time t1, t2;
+    int h, m, s;
 
-    Time t1(2, 15, 50);
-    Time t2(1, 45, 45);
+    cout << "\nEnter time 1: " << endl;
+    cout << "Hours: ";
+    cin >> h;
+    cout << "Minutes: ";
+    cin >> m;
+    cout << "Seconds: ";
+    cin >> s;
+    t1 = Time(h, m, s);
+
+    cout << "\nEnter time 2: " << endl;
+    cout << "Hours: ";
+    cin >> h;
+    cout << "Minutes: ";
+    cin >> m;
+    cout << "Seconds: ";
+    cin >> s;
+    t2 = Time(h, m, s);
 
     Time t3 = t1 + t2;
-
+    cout << "\nTime after addition of 1 and 2: ";
     t3.display();
 
     return 0;

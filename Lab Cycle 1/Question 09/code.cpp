@@ -26,6 +26,6 @@ int main(){
     std::cout<<"Enter the number of objects to create: ";
     std::cin>>x;
     Static st[x];
-    st[x].showcount();
+    st[x-1].showcount();
     return 0;
 }

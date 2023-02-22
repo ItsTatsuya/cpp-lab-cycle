@@ -76,15 +76,21 @@ int main()
         {
             cout << "Enter the code of the item to be deleted : ";
             cin >> code1;
+            bool item_found = false;
             for (int i = 0; i < n - 1; i++)
             {
                 if (obj[i].return_code() == code1)
                 {
                     obj[i] = obj[i + 1];
+                    item_found = true;
                 }
+                n--;
             }
-            n--;
             cout << "Item deleted successfully\n";
+            if (!item_found)
+            {
+                cout << "Item not found\n";
+            }
         }
         else if (choice == 4)
         {
