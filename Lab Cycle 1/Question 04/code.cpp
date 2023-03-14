@@ -38,18 +38,14 @@ void Strings::concatenate(const Strings &string1, const Strings &string2)
 
 void Strings::compare(const Strings &string1, const Strings &string2)
 {
-    if (string1.length == string2.length)
-    {
-        cout << string1.name << " is equal to " << string2.name << endl;
-    }
-    else if (string1.length > string2.length)
-    {
+    if (strcmp(string1.name, string2.name) > 0)
         cout << string1.name << " is greater than " << string2.name << endl;
-    }
+    
+    else if (strcmp(string1.name, string2.name) < 0)
+        cout << string1.name << " is less than " << string2.name << endl;
+    
     else
-    {
-        cout << string2.name << " is greater than " << string1.name << endl;
-    }
+        cout << "Both strings are equal" << endl;
 }
 
 void Strings::displayLength()
