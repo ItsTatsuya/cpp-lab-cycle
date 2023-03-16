@@ -1,6 +1,3 @@
-/*Write a C++ program to overload ==, !=, <, <=, > and >= operators as
-member operator functions for a vector object.*/
-
 #include <iostream>
 using namespace std;
 class vector
