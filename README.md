@@ -28,3 +28,8 @@ CPP Lab Cycle
   * [**Question 6**](/Lab%20Cycle%202/Question%2006/)
   * [**Question 7**](/Lab%20Cycle%202/Question%2007/)
   * [**Question 8**](/Lab%20Cycle%202/Question%2008/)
+  
+* [**Lab Cycle 3**](/Lab%20Cycle%203/)
+  * [**Question 1**](/Lab%20Cycle%203/Question%2001/)
+  * [**Question 2**](/Lab%20Cycle%203/Question%2002/)
+  * [**Question 3**](/Lab%20Cycle%203/Question%2003/)
