@@ -1,10 +1,3 @@
-/* Write a C++ program to design a student class representing student roll no. and
-a test class (derived class of student) representing the scores of the student in
-various subjects and sports class representing the score in sports. The sports and
-test class should be inherited by a result class having the functionality to add
-the scores and display the final result for a student. Demonstrate the concept of
-Virtual base class on Hybrid inheritance.*/
-
 #include<iostream>
 using namespace std;
 
@@ -18,7 +11,7 @@ class student
     }
     void display()
     {
-        cout<<"Roll no. is "<<roll<<endl;
+        cout<<"Roll no: "<<roll<<endl;
     }
 };
 
@@ -33,8 +26,8 @@ class test:virtual public student
     }
     void display()
     {
-        cout<<"Marks in test 1 is "<<t1<<endl;
-        cout<<"Marks in test 2 is "<<t2<<endl;
+        cout<<"Marks in test 1: "<<t1<<endl;
+        cout<<"Marks in test 2: "<<t2<<endl;
     }
 };
 
@@ -48,7 +41,7 @@ class sports:virtual public student
     }
     void display()
     {
-        cout<<"Marks in sports is "<<s<<endl;
+        cout<<"Marks in sports: "<<s<<endl;
     }
 };
 
@@ -56,7 +49,7 @@ class result:public test,public sports
 {
     int total;
     public:
-    result(int x,int y,int z,int a,int b):student(x),test(x,y,z),sports(x,a)
+    result(int x,int y,int z,int a):student(x),test(x,y,z),sports(x,a)
     {
         total=y+z+a;
     }
@@ -68,10 +61,13 @@ class result:public test,public sports
 
 int main()
 {
-    result obj(1,10,20,30,40);
-    obj.student::display();
-    obj.test::display();
-    obj.sports::display();
-    obj.result::display();
+    cout<<"Enter (roll no, test 1 mark, test 2 mark, sports mark): ";
+    int roll,t1,t2,s;
+    cin>>roll>>t1>>t2>>s;
+    result r(roll,t1,t2,s);
+    r.student::display();
+    r.test::display();
+    r.sports::display();
+    r.display();
     return 0;
 }

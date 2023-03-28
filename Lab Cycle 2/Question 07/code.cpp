@@ -45,7 +45,10 @@ class gamma:public alpha,public beta
 
 int main()
 {
-    gamma g(1,2,3);
+    cout<<"Enter the value of a,b and c: ";
+    int a,b,c;
+    cin>>a>>b>>c;
+    gamma g(a,b,c);
     g.alpha::display();
     g.beta::display();
     g.display();

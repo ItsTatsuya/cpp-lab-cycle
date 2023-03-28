@@ -45,10 +45,13 @@ class C:public B
 
 int main()
 {
-    C obj(10,20,30);
+    cout<<"Enter three numbers: ";
+    int a,b,c;
+    cin>>a>>b>>c;
+    C obj(a,b,c);
     obj.A::display();
     obj.B::display();
-    obj.C::display();
+    obj.display();
     return 0;
 }
 
