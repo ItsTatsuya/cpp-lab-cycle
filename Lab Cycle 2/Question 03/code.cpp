@@ -44,9 +44,9 @@ istream &operator>>(istream &in, vector &v)
 int main()
 {
     vector v1, v2, v3;
-    cout << "Enter the values of v1: " << endl;
+    cout << "Enter the values of vector v1: " << endl;
     cin >> v1;
-    cout << "Enter the values of v2: " << endl;
+    cout << "\nEnter the values of vector v2: " << endl;
     cin >> v2;
     v3 = v1 * v2;
     cout << "\nValues of v1 and v2 before multiplication:\n";

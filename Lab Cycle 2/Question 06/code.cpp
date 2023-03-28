@@ -60,14 +60,21 @@ class result:public test,public sports
 };
 
 int main()
-{
-    cout<<"Enter (roll no, test 1 mark, test 2 mark, sports mark): ";
-    int roll,t1,t2,s;
-    cin>>roll>>t1>>t2>>s;
-    result r(roll,t1,t2,s);
-    r.student::display();
-    r.test::display();
-    r.sports::display();
-    r.display();
+{   
+    cout<<"Enter number of students:";
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter (roll no, test 1 mark, test 2 mark, sports mark): ";
+        int roll,t1,t2,s;
+        cin>>roll>>t1>>t2>>s;
+        result r(roll,t1,t2,s);
+        r.student::display();
+        r.test::display();
+        r.sports::display();
+        r.display();
+        cout<<endl;
+    }
     return 0;
 }

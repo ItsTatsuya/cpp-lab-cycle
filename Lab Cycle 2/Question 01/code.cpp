@@ -6,7 +6,7 @@ class vector
 public:
     void input()
     {
-        cout << "Enter the value of x: ";
+        cout << "\nEnter the value of x: ";
         cin >> x;
         cout << "Enter the value of y: ";
         cin >> y;
@@ -63,9 +63,14 @@ int main()
 {
     vector v1, v2;
     v1.input();
-    system("clear");
     v2.input();
-    system("clear");
+    
+    cout << "\nVector 1" << endl;
+    v1.display();
+    cout << "\nVector 2" << endl;
+    v2.display();
+    cout<<endl;
+
     if (v1 == v2)
         cout << "v1 is equal to v2" << endl;
     else

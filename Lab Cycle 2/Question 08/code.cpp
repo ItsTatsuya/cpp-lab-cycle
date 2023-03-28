@@ -1,74 +1,78 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Shapes
 {
-    public:
-    virtual void getdata()=0;
-    virtual void display()=0;
+public:
+    virtual void getdata() = 0;
+    virtual void display() = 0;
 };
 
-class Circle:public Shapes
+class Circle : public Shapes
 {
     float r;
-    public:
+
+public:
     void getdata()
     {
-        cout<<"Enter radius of circle: ";
-        cin>>r;
+        cout << "Enter radius of circle: ";
+        cin >> r;
     }
     void display()
     {
-        cout<<"Area of circle is "<<3.14*r*r<<endl;
+        cout << "Area of circle is " << 3.14 * r * r << endl;
     }
 };
 
-class Square:public Shapes
+class Square : public Shapes
 {
     float s;
-    public:
+
+public:
     void getdata()
     {
-        cout<<"Enter side of square: ";
-        cin>>s;
+        cout << "\nEnter side of square: ";
+        cin >> s;
     }
     void display()
     {
-        cout<<"Area of square is "<<s*s<<endl;
+        cout << "Area of square is " << s * s << endl;
     }
 };
 
-class Ellipse:public Shapes
+class Ellipse : public Shapes
 {
-    float a,b;
-    public:
+    float a, b;
+
+public:
     void getdata()
     {
-        cout<<"Enter major axis of ellipse: ";
-        cin>>a;
-        cout<<"Enter minor axis of ellipse: ";
-        cin>>b;
+        cout << "\nEnter major axis of ellipse: ";
+        cin >> a;
+        cout << "Enter minor axis of ellipse: ";
+        cin >> b;
     }
     void display()
     {
-        cout<<"Area of ellipse is "<<3.14*a*b<<endl;
+        cout << "Area of ellipse is " << 3.14 * a * b << endl;
     }
 };
 
-class Rectangle:public Shapes
+class Rectangle : public Shapes
 {
-    float l,b;
-    public:
+    float l, b;
+
+public:
     void getdata()
     {
-        cout<<"Enter length of rectangle: ";
-        cin>>l;
-        cout<<"Enter breadth of rectangle: ";
-        cin>>b;
+        cout << "\nEnter length of rectangle: ";
+        cin >> l;
+        cout << "Enter breadth of rectangle: ";
+        cin >> b;
     }
     void display()
     {
-        cout<<"Area of rectangle is "<<l*b<<endl;
+        cout << "Area of rectangle is " << l * b << endl;
     }
 };
 
@@ -79,17 +83,40 @@ int main()
     Square sq;
     Ellipse e;
     Rectangle r;
-    s=&c;
-    s->getdata();
-    s->display();
-    s=&sq;
-    s->getdata();
-    s->display();
-    s=&e;
-    s->getdata();
-    s->display();
-    s=&r;
-    s->getdata();
-    s->display();
-    return 0;
+    bool loop = true;
+    while (loop == true)
+    {
+        cout << "\n1. Circle \t 2. Square \t 3. Ellipse \t 4. Rectangle \t 5. Exit" << endl;
+        cout << "Enter your choice: ";
+        int ch;
+        cin >> ch;
+        switch (ch)
+        {
+        case 1:
+            s = &c;
+            s->getdata();
+            s->display();
+            break;
+        case 2:
+            s = &sq;
+            s->getdata();
+            s->display();
+            break;
+        case 3:
+            s = &e;
+            s->getdata();
+            s->display();
+            break;
+        case 4:
+            s = &r;
+            s->getdata();
+            s->display();
+            break;
+        case 5:
+            exit(0);
+            break;
+        default:
+            cout << "Invalid choice";
+        }
+    }
 }

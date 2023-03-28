@@ -6,14 +6,14 @@ class complex
 public:
     void input()
     {
-        cout << "Enter the value of real: ";
+        cout << "\nEnter the value of real: ";
         cin >> real;
         cout << "Enter the value of img: ";
         cin >> img;
     }
     void display()
     {
-        cout << "The value of real: " << real << endl;
+        cout << "\nThe value of real: " << real << endl;
         cout << "The value of img: " << img << endl;
     }
     friend complex operator+(complex &c1, complex &c2);
@@ -36,19 +36,21 @@ complex operator*(complex &c1, complex &c2)
 int main()
 {
     complex c1, c2, c3, c4;
+    cout << "\nEnter the values for first complex number:\n";
     c1.input();
+    cout << "\nEnter the values for second complex number:\n";
     c2.input();
     c3 = c1 + c2;
     c4 = c1 * c2;
-    cout << "\nValues of c1 and c2 before addition:\n";
+    cout << "\nValues before addition:\n";
     c1.display();
     c2.display();
-    cout << "\nValues of c3 after addition:\n";
+    cout << "\nValues after addition:\n";
     c3.display();
-    cout << "\nValues of c1 and c2 before multiplication:\n";
+    cout << "\nValues before multiplication:\n";
     c1.display();
     c2.display();
-    cout << "\nValues of c4 after multiplication:\n";
+    cout << "\nValues after multiplication:\n";
     c4.display();
     return 0;
 }

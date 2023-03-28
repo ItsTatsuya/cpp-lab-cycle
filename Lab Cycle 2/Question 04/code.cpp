@@ -56,7 +56,7 @@ int main()
     int r1, c1, r2, c2;
     cout << "Enter the number of rows and columns of the first matrix: ";
     cin >> r1 >> c1;
-    cout << "Enter the number of rows and columns of the second matrix: ";
+    cout << "\nEnter the number of rows and columns of the second matrix: ";
     cin >> r2 >> c2;
     matrix m1(r1, c1), m2(r2, c2), m3(r1, c2);
     m1.input();
