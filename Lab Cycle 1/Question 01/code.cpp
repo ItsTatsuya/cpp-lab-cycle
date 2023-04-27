@@ -74,4 +74,5 @@ int main()
     {
         s[i].display();
     }
+    return 0;
 }
