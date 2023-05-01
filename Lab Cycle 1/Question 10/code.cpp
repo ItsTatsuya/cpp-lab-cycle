@@ -9,7 +9,7 @@ class store
 
 public:
     void add_item();
-    void display_item();
+    int display_item();
     int return_code()
     {
         return code;
@@ -38,63 +38,67 @@ void store::add_item()
     cin >> quantity;
 }
 
-void store::display_item()
+int store::display_item()
 {
     int sum = price * quantity;
     cout << code << "\t" << name << "\t" << price << "\t" << quantity << "\t\t" << sum << endl;
+    return sum;
 }
 
 int main()
 {
-    int n, choice, code1;
-    cout << "Enter the number of items : ";
-    cin >> n;
-    store obj[n];
+    int choice, code1, total = 0,n=1;
+    store obj[100];
     bool Loop = true;
     while (Loop)
     {
-        cout << "\n1. Add item\n2. Display item\n3. Delete Item\n4. Exit\nEnter your choice : ";
+        cout << "\n--------------------MENU--------------------";
+        cout << "\n1. Add item to Bill\n2. Display Bill\n3. Delete Item from Bill\n4. Exit\nEnter your choice : ";
         cin >> choice;
         if (choice == 1)
         {
-            for (int i = 0; i < n; i++)
-            {
-                obj[i].add_item();
-            }
+            obj[n].add_item();
+            n++;
         }
         else if (choice == 2)
         {
             cout << "\n--------------------RECEIPT--------------------\n";
             cout << "Code\tName\tPrice\tQuantity\tTotal\n";
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i < n; i++)
             {
-                obj[i].display_item();
+                total += obj[i].display_item();
             }
-            cout << "---------------------------------------------------\n";
+            cout << "------------------------------------------------\n";
+            cout << "                                      Total=" << total;
         }
         else if (choice == 3)
         {
-            cout << "Enter the code of the item to be deleted : ";
+        cout << "Enter the code of the item to be deleted : ";
             cin >> code1;
             bool item_found = false;
-            for (int i = 0; i < n - 1; i++)
+            for (int i = 1; i < n; i++)
             {
-                if (obj[i].return_code() == code1)
+                int cod = obj[i].return_code();
+                if (cod == code1)
                 {
-                    obj[i] = obj[i + 1];
+                    for (int j = i; j < n-1; j++) {
+                        obj[j] = obj[j+1];
+                    }
                     item_found = true;
+                    n--;
+                    break;
                 }
-                n--;
             }
-            cout << "Item deleted successfully\n";
-            if (!item_found)
-            {
+            if (item_found) {
+                cout << "Item deleted successfully\n";
+            } else {
                 cout << "Item not found\n";
             }
         }
         else if (choice == 4)
         {
             Loop = false;
+            cout << "Thank you for shopping with us\n";
         }
         else
         {
