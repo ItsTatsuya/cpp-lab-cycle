@@ -5,52 +5,56 @@ class alpha
 {
     int a;
     public:
-    alpha(int x)
-    {
-        a=x;
-    }
-    void display()
-    {
-        cout<<"Value of a is "<<a<<endl;
-    }
+        alpha(int a1)
+        {
+            a = a1;
+            cout << "Alpha initialized\n";
+        }
+        void show_a(void)
+        {
+            cout << "a = " << a << "\n";
+        }
 };
 
 class beta
 {
     int b;
     public:
-    beta(int x)
-    {
-        b=x;
-    }
-    void display()
-    {
-        cout<<"Value of b is "<<b<<endl;
-    }
+        beta(float b1)
+        {
+            b = b1;
+            cout << "Beta initialized\n";
+        }
+        void show_b(void)
+        {
+            cout << "b = " << b << "\n";
+        }
 };
 
-class gamma:public alpha,public beta
+class gamma : public beta, public alpha
 {
-    int c;
+    int g;
     public:
-    gamma(int x,int y,int z):alpha(x),beta(y)
-    {
-        c=z;
-    }
-    void display()
-    {
-        cout<<"Value of c is "<<c<<endl;
-    }
-};
+        gamma(int a1, int b1, int g1) : alpha(a1), beta(b1)
+        {
+            g=g1;
+            cout << "Gamma initialized\n";
+        }
+        void show_g(void)
+        {
+            cout << "g = " << g << "\n";
+        }
+};  
 
 int main()
 {
-    cout<<"Enter the value of a,b and c: ";
-    int a,b,c;
-    cin>>a>>b>>c;
-    gamma g(a,b,c);
-    g.alpha::display();
-    g.beta::display();
-    g.display();
+    int a, b, g;
+    cout<<"Enter values for a in alpha, b in beta and g in gamma: ";
+    cin>>a>>b>>g;
+    gamma g1(a, b, g);
+    cout<<"\n";
+    g1.show_a();
+    g1.show_b();
+    g1.show_g();
     return 0;
 }
