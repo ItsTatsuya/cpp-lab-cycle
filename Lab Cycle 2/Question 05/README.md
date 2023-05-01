@@ -10,4 +10,4 @@ https://github.com/ItsTatsuya/cpp-lab-cycle/blob/53d2a8efa3f2276abfadd909e0465c0
 **Output:**
 
 
-![image](/Lab%20Cycle%202/Question%2005/output.PNG)
+![image](/Lab%20Cycle%202/Question%2005/output2.PNG)
